@@ -1,10 +1,13 @@
-variable "rule-name" {}
+variable "rule-name" {
+  description = "Rule to set up alarm."
+}
 variable "sns-topic" {
   description = "Name of the topic where to send a notifications."
 }
 variable "enabled" {
   type = bool
   default = true
+  description = "Determine if resources should be created."
 }
 variable "tags" {
   type = "map"
